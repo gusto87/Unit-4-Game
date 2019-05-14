@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Unit 4 Game</title>
+</head>
+<div class="numbers">
+
+</div>
+
+<body style="background-color: burlywood"></body>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column"> <p id="Btn1">
+                <button id="button1" value="27" onclick="myfunction()"><img src="assets/images/crystal1.png"></button>
+                </p>
+            </div>
+            <div class="column"> <p id="Btn2">
+                <button id="button2" value="56" onclick="myfunction2()"><img src="assets/images/crystal2.png"></button>
+                </p>
+            </div>
+            <div class="column"> <p id="Btn3">
+                <button id="button3" value="107"><img src="assets/images/crystal3.png"></button>
+                </p>
+            </div>
+            <div class="column"> <p id="Btn4">
+                <button id="button4" value="34"><img src="assets/images/crystal4.png"></button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfunction(){
+            var x = document.getElementById("button1").value;
+            document.getElementById("Btn1").innerHTML = x
+        }
+        function myfunction2(){
+            var x = document.getElementById("button2").value;
+            document.getElementById("Btn2").innerHTML = x
+        }
+
+        function getRandomNumber(start, range) {
+            let getRandom = Math.floor((Math.random() * range) + start);
+            while (getRandom > range) {
+                getRandom = Math.floor((Math.random() * range) + start);
+            }
+            return getRandom;
+        }
+        console.log(getRandomNumber(19, 120));
+        document.write(getRandomNumber(19, 120));
+    </script>
+
+</body>
+
+</html>
