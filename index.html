@@ -26,17 +26,19 @@
                 </p>
             </div>
             <div class="column"> <p id="Btn3">
-                <button id="button3" value="107"><img src="assets/images/crystal3.png"></button>
+                <button id="button3" value="107" onclick="myfunction3()"><img src="assets/images/crystal3.png"></button>
                 </p>
             </div>
             <div class="column"> <p id="Btn4">
-                <button id="button4" value="34"><img src="assets/images/crystal4.png"></button>
+                <button id="button4" value="34" onclick="myfunction4()"><img src="assets/images/crystal4.png"></button>
                 </p>
             </div>
         </div>
     </div>
 
     <script>
+        var userScore = 0
+
         function myfunction(){
             var x = document.getElementById("button1").value;
             document.getElementById("Btn1").innerHTML = x
@@ -44,6 +46,14 @@
         function myfunction2(){
             var x = document.getElementById("button2").value;
             document.getElementById("Btn2").innerHTML = x
+        }
+        function myfunction3(){
+            var x = document.getElementById("button3").value;
+            document.getElementById("Btn3").innerHTML = x
+        }
+        function myfunction4(){
+            var x = document.getElementById("button4").value;
+            document.getElementById("Btn4").innerHTML = x
         }
 
         function getRandomNumber(start, range) {
@@ -53,10 +63,23 @@
             }
             return getRandom;
         }
+       
+            
+    
         console.log(getRandomNumber(19, 120));
         document.write(getRandomNumber(19, 120));
+
+        $("#button1").on("click", function add(){
+           userScore = userScore + "Btn1" 
+           $("#current-score").text(userScore);
+           comparisonCheck();
+            
+       });
     </script>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="test.js"></script>
 
 </html>
